@@ -17,7 +17,7 @@ const Card = ({ title, description, imageSrc }: CardProps) => {
      cursor="pointer" 
      borderRadius="xl" 
    > 
-     <Image borderRadius="xl" src={imageSrc} alt={title} /> 
+     <Image src={imageSrc} alt={title} borderRadius="xl" objectFit="cover" w="100%" h="250px" /> 
      <VStack spacing={4} p={4} alignItems="flex-start"> 
        <HStack justifyContent="space-between" alignItems="center"> 
          <Heading as="h3" size="md"> 

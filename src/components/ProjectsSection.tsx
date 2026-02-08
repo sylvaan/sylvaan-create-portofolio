@@ -1,33 +1,34 @@
+
  
 import FullScreenSection from "./FullScreenSection"; 
 import { Box, Heading } from "@chakra-ui/react"; 
 import Card from "./Card"; 
 
 const projects = [ 
- { 
-   title: "React Space", 
-   description: 
-     "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️", 
-   getImageSrc: () => "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80", 
- }, 
- { 
-   title: "React Infinite Scroll", 
-   description: 
-     "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️", 
-   getImageSrc: () => "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80", 
- }, 
- { 
-   title: "Photo Gallery", 
-   description: 
-     "A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income", 
-   getImageSrc: () => "https://images.unsplash.com/photo-1628254747634-c5039f3dea46?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80", 
- }, 
- { 
-   title: "Event planner", 
-   description: 
-     "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps", 
-   getImageSrc: () => "https://images.unsplash.com/photo-1517059224975-d9c9e81b9c79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80", 
- }, 
+  { 
+    title: "Healthcare Patient Application", 
+    description: 
+      "A comprehensive platform for managing patient records, appointments, and medical history securely.", 
+    getImageSrc: () => "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1240&q=80", 
+  }, 
+  { 
+    title: "HR Inventory System", 
+    description: 
+      "Internal system for tracking office assets, managing employee assignments, and generating real-time inventory reports.", 
+    getImageSrc: () => "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1240&q=80", 
+  }, 
+  { 
+    title: "PL Dashboard Application", 
+    description: 
+      "Interactive dashboard visualizing Premier League statistics, player performance metrics, and match results.", 
+    getImageSrc: () => "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1240&q=80", 
+  }, 
+  { 
+    title: "Basic Database", 
+    description: 
+      "A custom-built relational database management system supporting SQL-like queries and ACId transactions.", 
+    getImageSrc: () => "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1240&q=80", 
+  }, 
 ]; 
 
 const ProjectsSection = () => { 
@@ -44,8 +45,8 @@ const ProjectsSection = () => {
      </Heading> 
      <Box 
        display="grid" 
-       gridTemplateColumns="repeat(2,minmax(0,1fr))" 
-       gridGap={8} 
+       gridTemplateColumns={{ base: "1fr", md: "repeat(2,minmax(0,1fr))" }} 
+       gridGap={{ base: 4, md: 8 }} 
      > 
        {projects.map((project) => ( 
          <Card 
