@@ -1,73 +1,74 @@
-# React + TypeScript + Vite
+# Portfolio Project - Meta Front-End Developer Capstone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a submission for the **Meta Front-End Developer Professional Certificate** (specifically the _Advanced React_ course). It demonstrates the implementation of a portfolio website using React, Chakra UI, and form management libraries.
 
-Currently, two official plugins are available:
+> **Note**: This is not a personal portfolio but a project created for educational and assessment purposes. The content (bio, projects) is placeholder data as per the project requirements.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Header**: Responsive navigation bar with smooth scrolling and social links.
+- **Landing Section**: Introduction component with avatar and greeting.
+- **Projects Section**: Grid layout displaying project cards.
+- **Contact Me Section**: Fully functional form with validation using **Formik** and **Yup**.
+- **Alert System**: Custom **Context API** implementation to manage global alert states.
+- **Responsive Design**: Adapts to various screen sizes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies Used
 
-## Expanding the ESLint configuration
+- **Framework**: [React](https://reactjs.org/) (v18)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **UI Library**: [Chakra UI](https://chakra-ui.com/) (v2)
+- **Form Handling**: [Formik](https://formik.org/)
+- **Validation**: [Yup](https://github.com/jquense/yup)
+- **Icons**: [FontAwesome](https://fontawesome.com/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Node.js (v14 or later)
+- npm (v6 or later)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone <repository-url>
+   cd sylvaan-create-portofolio
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+
+   ```bash
+   npm start
+   # or
+   npm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+## Project Structure
+
+```
+src/
+├── components/       # UI Components (Header, Landing, Projects, Contact, etc.)
+├── context/          # AlertContext for managing application state
+├── hooks/            # Custom hooks (useSubmit, useAlertContext)
+├── App.tsx           # Main application layout
+├── main.tsx          # Entry point with ChakraProvider
+└── ...
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## License
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This project is licensed under the MIT License.
